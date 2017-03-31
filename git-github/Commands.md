@@ -11,7 +11,7 @@
     git merge --squash issue1
     
 ### Collaboration
-##### If work with others in the same branch, after each `force push`, we need to let others know and others need to do a `git reset --hard HEAD` to sync with the force push
+##### If work with others in the same branch, after each `force push`, we need to let others know and others need to do a `git reset --hard origin/branch_name` to sync with the force push. If you have any unstaged changes, make sure you stash them before doing that. If you have unpushed commit, you can do `git fetch` then `git rebase -i origin/branch_name` and only pick that unpushed commit.
 
 ## Work locally  
 
