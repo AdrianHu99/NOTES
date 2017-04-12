@@ -16,7 +16,7 @@
 ### Checkout   
 ##### With branch specifier only (`git checkout branch`) it will switch current working directory to specified branch, keeping local changes if possible and failing otherwise. If you already are on branch, it will do nothing at all. It only modifies files in the working directory that differ between  HEAD and branch and fails if any of them has local modifications (indexed or not).
 ##### With path specifier only (`git checkout .`) it writes content from index. That it is undoes unstaged local modification. To undo staged modifications, use git reset with path specifier.
-##### With both branch and path specifiers (`git checkout branch .`) it writes content in specified revision. It will not modify where HEAD points, so if branch is different from HEAD, there will be unstaged changes afterwards.
+##### With both branch and path specifiers (`git checkout branch .`) it writes content in specified revision. It will not modify where HEAD points, so if branch is different from HEAD, there will be staged changes afterwards. And if you have unstaged or staged changes in the previous branch, it will be gone.  
 
 ## Work locally  
 
