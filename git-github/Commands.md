@@ -3,8 +3,15 @@
 
 ## Work with remote   
 
-### Fetch remote branch   
+### Branch    
+##### Fetch from remote branch  
     git checkout --track origin/daves_branch  |  git checkout -b [branch] [remotename]/[branch]
+
+##### Change the branch name  
+    git branch -m new_name
+
+##### 
+
 
 ### Merge  
 ##### Merge all commits on issue1 branch to one commit and import it to the master branch
@@ -37,6 +44,7 @@
     git reset --hard ORIG_HEAD
 ##### Undo a commit and make the last commit to unstaged changes  
     git reset HEAD~
+
     
 ### Search in the history  
 
