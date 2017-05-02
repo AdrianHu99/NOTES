@@ -8,4 +8,7 @@ The chart factory will have a static getInstance() method, it will be responsibl
 
 ## Factory Method  
 
-![]()
+![](https://github.com/adrrrrrrrian/notes/blob/master/Java/Design%20Patterns/Factory%20Method.PNG)
+
+The difference between factory method and simple factory method is that factory method will have corresponding factory for each product.
+
