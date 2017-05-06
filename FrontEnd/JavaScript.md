@@ -7,3 +7,11 @@
 
 
 `var` is now the **weakest signal available** when you define a variable in JavaScript. The variable may or may not be reassigned, and the variable may or may not be used for an entire function, or just for the purpose of a block or loop.
+
+2. The difference between **for...in** loop and **for(i;i < x; i++)** loop:   
+
+`For..in` loop is for enumeration, it should not be used for array-like objects. The order of iteration is not guaranteed, the array indexes may not be visited in numeric order. And inherited properties are also enumerated. In short, it is looping object's properties.
+
+`For(i..)` loop is for iteration.
+
+3. 
