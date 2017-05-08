@@ -3,6 +3,11 @@
 
 ## Work with remote   
 
+### Credential   
+##### How to avoid being asked for password and username everytime I push?  
+    git config credential.helper store
+    git push https://github.com/repo.git
+
 ### Branch    
 ##### Fetch from remote branch  
     git checkout --track origin/daves_branch  |  git checkout -b [branch] [remotename]/[branch]
