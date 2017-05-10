@@ -49,6 +49,8 @@
     git reset --hard ORIG_HEAD
 ##### Undo a commit and make the last commit to unstaged changes  
     git reset HEAD~
+##### When you are one step behind the remote one, and you want to sync with it  
+    git reset --hard origin/bugfix/DS-xxxx
 
     
 ### Search in the history  
