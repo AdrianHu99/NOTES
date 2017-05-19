@@ -51,6 +51,15 @@
     git reset HEAD~
 ##### When you are one step behind the remote one, and you want to sync with it  
     git reset --hard origin/bugfix/DS-xxxx
+    
+### Rebase
+
+##### amend to an older commit
+    git rebase -i HEAD^^^
+    choose the commit you want to amend, change `pick` to `edit`
+    do your changes, add them, git commit --amend --no-edit
+    git rebase --continue
+
 
     
 ### Search in the history  
