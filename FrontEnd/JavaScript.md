@@ -14,4 +14,9 @@
 
 `For(i..)` loop is for iteration.
 
-3. 
+3. InnerHTML vs. textContent  
+  
+        `textContent` is the actually text, if you add a <h2> and </h2>, it will print them out.
+        `InnerHTML` will interpret it as HTML, <h2> and </h2> would work.
+
+4. Instead of getDocumentById("title"), we can also use querySelector("#title")  
