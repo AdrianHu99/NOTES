@@ -19,4 +19,12 @@
         `textContent` is the actually text, if you add a <h2> and </h2>, it will print them out.
         `InnerHTML` will interpret it as HTML, <h2> and </h2> would work.
 
-4. Instead of getDocumentById("title"), we can also use querySelector("#title")  
+4. Instead of getDocumentById("title"), we can also use querySelector("#title")    
+
+5. If a variable is initiated without 'var', then it will be global by default, which is really dangerous.  
+
+6. Operations
+         1   ==  1    // true  
+         1   ==  2    // false
+         1   == '1'   // true
+         "3"  ==  3    // true
