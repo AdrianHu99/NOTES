@@ -28,3 +28,7 @@
          1   ==  2    // false
          1   == '1'   // true
          "3"  ==  3    // true
+
+7. The individual characters of a string literal cannot be changed. For example, myStr = "Jello World"; you can't do a myStr[0] = "H"; instead, you can change it all together, myStr = "Hello World";    
+
+8. 
