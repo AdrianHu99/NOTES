@@ -51,6 +51,10 @@
     git reset HEAD~
 ##### When you are one step behind the remote one, and you want to sync with it  
     git reset --hard origin/bugfix/DS-xxxx
+##### When you do reset, you have 3 choices: --hard, --soft and nothing: 
+    git reset --hard HEAD~ will let you go back to the previous commit, and the previous latest commit will be gone;
+    git reset --soft HEAD~ will let you go back to the previous commit, and the previous latest commit will become staged changes;
+    git reset HEAD~ will let you go back to the previous commit, and the previous latest commit will become unstaged changes.
     
 ### Rebase
 
