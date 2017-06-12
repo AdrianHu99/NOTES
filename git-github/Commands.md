@@ -70,3 +70,8 @@
 
 ##### Search what happened inside a folder or a file: 
     git log -- xxx/xxx/xxx/aaa  |  git log -- xxx/xxx/xxx/abc.java
+    
+##### Search for a specific commit in the history.
+    git log --all --grep='XXXXX'
+    
+    
