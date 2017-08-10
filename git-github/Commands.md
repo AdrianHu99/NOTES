@@ -65,7 +65,10 @@
     choose the commit you want to amend, change `pick` to `edit`
     do your changes, add them, git commit --amend --no-edit
     git rebase --continue
-
+    
+##### Remove the merge commit  
+    git rebase -i <sha of the commit before the diverge>
+    then it will remove the merge commit
 
     
 ### Search in the history  
@@ -77,3 +80,8 @@
     git log --all --grep='XXXXX'
     
     
+### diff
+
+##### git diff
+    after git diff, you can save the diff file: git diff sha1 sha2 > aaa.diff
+    then you can do git apply aaa.diff to add the difference to your branch
