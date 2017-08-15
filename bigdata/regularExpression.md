@@ -12,3 +12,7 @@
         [a-z0-9] The set of characters can include a range  
         (       Indicates where string extraction is to start  
         )       Indicates where string extraction is to end  
+
+
+#### find } catch { \n  log.error...  \n  throw ...
+    ^(.*} catch.*)(?:(?:\r\n|[\r\n])[^\r\n]+)(log.error.*)(?:(?:\r\n|[\r\n])[^\r\n]+)(throw)
