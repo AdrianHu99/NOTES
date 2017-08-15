@@ -29,3 +29,8 @@ Click OK to close the Configuration Parameters dialog box, and click OK again to
 
 6
 Restart the virtual machine.  
+
+### Why I can't use browser to visit 80 port of my VM?
+
+    Try stop and disable the firewall of the VM.
+    e.g. systemctl stop firewalld.service              systemctl disable firewalld.service
