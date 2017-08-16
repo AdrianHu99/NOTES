@@ -27,5 +27,31 @@
       5. Use getStackTrace() instead of getCause() if the exception was not chained from another layer;
       6. 
 
-### 
+#### Different method of Exception
+
+      printStackTrace(): 
+            java.lang.ArithmeticException: / by zero
+                at com.thirdbrigade.manager.core.Test.main(Test.java:10)
+                
+      log.error with e:
+            Aug 16, 2017 3:27:51 PM com.thirdbrigade.manager.core.Test main
+            SEVERE: error: 
+            java.lang.ArithmeticException: / by zero
+                at com.thirdbrigade.manager.core.Test.main(Test.java:10)
+                
+      log.error with e.getStackTrace():
+            Aug 16, 2017 3:27:51 PM com.thirdbrigade.manager.core.Test main
+            SEVERE: error and [Ljava.lang.StackTraceElement;@27f8302d
+            
+      print getStackTrace()
+            [com.thirdbrigade.manager.core.Test.main(Test.java:12)] (remember to use Arrays.toString(e.getStackTrace()))
+            
+      print e.getCause()
+            null
+            
+      print e.toString()
+            java.lang.ArithmeticException: / by zero
+            
+      print e.getMessage()
+            / by zero
 
