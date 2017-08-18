@@ -25,7 +25,8 @@
       3. Use ex.toString() instead of ex.getMessage() because toString() also includes the exception class name;
       4. Always leave some messages when an exception is caught, so that others can know what happened;
       5. Use getStackTrace() instead of getCause() if the exception was not chained from another layer;
-      6. 
+      6. Throwing an exception will end the method immediately;
+      7. 
 
 #### Different method of Exception
 
