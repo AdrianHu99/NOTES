@@ -41,6 +41,12 @@
         git fetch projectB
         git cherry-pick <first_commit>..<last_commit>
 
+### Conflicts
+
+##### Change some config to make things better
+
+    git config merge.conflictstyle diff3 // this will show you the base, local and remote; 
+    BASE is the common ancestor(s) of LOCAL and REMOTE
 
 ## Work locally  
 
