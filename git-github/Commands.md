@@ -32,6 +32,16 @@
 ##### With path specifier only (`git checkout .`) it writes content from index. That it is undoes unstaged local modification. To undo staged modifications, use git reset with path specifier.
 ##### With both branch and path specifiers (`git checkout branch .`) it writes content in specified revision. It will not modify where HEAD points, so if branch is different from HEAD, there will be staged changes afterwards. And if you have unstaged or staged changes in the previous branch, it will be gone.  
 
+### Cherry pick
+
+##### How to cherry pick a commit from another git repository  
+
+        cd /home/you/projectA
+        git remote add projectB /home/you/projectB
+        git fetch projectB
+        git cherry-pick <first_commit>..<last_commit>
+
+
 ## Work locally  
 
 ### Stash   
