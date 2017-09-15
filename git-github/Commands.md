@@ -15,7 +15,8 @@
 ##### Change the branch name  
     git branch -m new_name
 
-##### 
+##### Fetch just one branch
+    git fetch origin branch_name
 
 
 ### Merge  
