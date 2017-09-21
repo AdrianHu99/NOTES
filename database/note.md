@@ -49,3 +49,11 @@ It is never guaranteed that the returned result by do select is ordered unless w
       GO 10000
       
 Basically it will copy the systemevent 9395 and insert that row for 10000 times
+
+
+* **find by time**  
+
+      SELECT * from alert2s where alerttypeid = 28 and timeraised <=  TO_DATE('21/07/16', 'DD/MM/YY');
+      
+      
+      
