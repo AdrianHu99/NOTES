@@ -56,4 +56,9 @@ Basically it will copy the systemevent 9395 and insert that row for 10000 times
       SELECT * from alert2s where alerttypeid = 28 and timeraised <=  TO_DATE('21/07/16', 'DD/MM/YY');
       
       
+* **disable foreign key constraints**
       
+      ALTER TABLE Purchasing.PurchaseOrderHeader  
+      NOCHECK CONSTRAINT FK_PurchaseOrderHeader_Employee_EmployeeID;  
+      
+
