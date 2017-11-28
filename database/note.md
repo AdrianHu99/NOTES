@@ -61,4 +61,7 @@ Basically it will copy the systemevent 9395 and insert that row for 10000 times
       ALTER TABLE Purchasing.PurchaseOrderHeader  
       NOCHECK CONSTRAINT FK_PurchaseOrderHeader_Employee_EmployeeID;  
       
+* **Reseed if you delete and want to reuse the primary key**
 
+      DBCC CHECKIDENT ('HOSTGROUPS', RESEED, 211); 
+      -- Could be any number, as long as it's the last one
