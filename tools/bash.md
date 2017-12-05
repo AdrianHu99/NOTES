@@ -23,4 +23,7 @@
 ##### exit
     exit 1
     
-##### 
+##### Error messages catching
+    var=$(git status 2>&1)
+    In this way, you redirect stderr to stdout and then capture the output.
+    Otherwise when for error messages are written on stderr and your command: var=$(git status) is only capturing stdout.
