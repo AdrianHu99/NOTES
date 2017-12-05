@@ -14,6 +14,12 @@
 
 ##### Change the branch name  
     git branch -m new_name
+    
+##### Check information of all branches
+    git branch -vv
+    
+##### Check current branch's information
+    git status -sb
 
 ##### Fetch just one branch
     git fetch origin branch_name
@@ -41,6 +47,14 @@
         git remote add projectB /home/you/projectB
         git fetch projectB
         git cherry-pick <first_commit>..<last_commit>
+        
+##### Check remote repos status
+
+        git remote -v
+        
+##### Remove a remote repo
+
+        git remote rm NAME
 
 ### Conflicts
 
