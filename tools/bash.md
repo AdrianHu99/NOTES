@@ -1,3 +1,6 @@
+A great tutorial is here: http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html#toc3
+
+
 #### String length  
     ${#test}
     
@@ -27,3 +30,20 @@
     var=$(git status 2>&1)
     In this way, you redirect stderr to stdout and then capture the output.
     Otherwise when for error messages are written on stderr and your command: var=$(git status) is only capturing stdout.
+    
+    stdout to a file
+    ls -l > ls-l.txt
+    
+    stderr to a file
+    grep da * 2> grep-errors.txt
+    
+    stdout to stderr
+    grep da * 1>&2 
+    
+    stderr to stdout
+    grep * 2>&1
+    
+    stderr and stdout to a file
+    rm -f $(find / -name core) &> /dev/null 
+    
+#####
