@@ -2,6 +2,11 @@
 
 1. `Collectors.toSet()` returns an unordered `Set`, and please remember `Set` does not have any duplicate elements.
 
+### JUnit
+
+#### Use powermockito to return specific results for some methods
+
+
 
 ### Exception handling
 
