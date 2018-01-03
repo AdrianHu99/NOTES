@@ -65,3 +65,15 @@ Basically it will copy the systemevent 9395 and insert that row for 10000 times
 
       DBCC CHECKIDENT ('HOSTGROUPS', RESEED, 211); 
       -- Could be any number, as long as it's the last one
+      
+      
+* **ORACLE use NULL LAST by default when sorting, while SQL SERVER use NULL FIRST by default for sorting**
+
+* **If we want to copy a row to the same table but want to change some columns, what we can do is: **
+
+      select * into temptable from TABLENAME where ID = 1
+      alter table temptable drop column columnA
+      update temptable set columnB = NULL
+      insert into TABLENAME select * from temptable
+
+
