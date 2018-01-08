@@ -61,3 +61,8 @@
       print e.getMessage()
             / by zero
 
+### Object hashCode() and Equals()
+
+      Equals() by default works the same way as '==', which compares the memory address of two objects.
+      If we override equals(), we need to make sure that if equals() returns true for two objects, the hashCode() will return the same value from these two objects.
+      If we change override() of that object, we need to make sure that equals() perform the way we want.
