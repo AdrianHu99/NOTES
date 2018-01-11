@@ -34,3 +34,7 @@ Restart the virtual machine.
 
     Try stop and disable the firewall of the VM.
     e.g. systemctl stop firewalld.service              systemctl disable firewalld.service
+
+### Why I can't change hard disk size?
+
+    Check if you have snapshots on that VM. Delete them all.
