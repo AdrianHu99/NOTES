@@ -36,4 +36,4 @@
         
 4. Don't forget to commit after each query run!!!
 
-5. 
+5. There is no way to add empty string, oracle will internally change that to null; and you can only do that with columns which allow null. For columns which don't allow null, you can only query them by **IS NOT NULL**. 
