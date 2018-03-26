@@ -85,6 +85,11 @@ a and c will not get any space, and they will not be initialized. You can not do
                   xxxx;
             }
             
+	    
+### HashMap
+
+		The method get() of HashMap will return null if the key is not existing;
+		And containsKey(null) will return false for sure;
             
             
             
