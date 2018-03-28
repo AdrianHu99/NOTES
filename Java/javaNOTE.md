@@ -93,7 +93,12 @@ a and c will not get any space, and they will not be initialized. You can not do
 
 ### Stream, parallelStream
 
-            Be careful of parallelStream as it may or may not increase performance. For structures like ArrayList, it's easy to split it to several small lists, but for structures like LinkedList, it will only make things complicated. Also, in an environment where it is multi-thread, it is also possible to make things worse.
-            
+             1. Source collection must be efficiently splittable
+	     	For structures like ArrayList, it's easy to split it to several small lists, but for structures like LinkedList, it will only make things complicated. 
+	     2. Make sure the size is big enough, otherwise does not worth parallel process.
+	     3. Also, in an environment where it is already multi-thread, it is also possible to make things worse.
+	     4. Be careful of parallelStream as it may have worse performance for single-core machine.
+	     5. The per-element function has to be independent.
+	     6. When your function is calling some synchronized functionality, then you probably would have no benefit from parallelize your stream due that your parallel streams will often wait on this synchronization barrier.        
             
             
