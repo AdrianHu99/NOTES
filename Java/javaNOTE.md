@@ -88,8 +88,11 @@ a and c will not get any space, and they will not be initialized. You can not do
 	    
 ### HashMap
 
-		The method get() of HashMap will return null if the key is not existing;
-		And containsKey(null) will return false for sure;
+		1. The method get() of HashMap will return null if the key is not existing;
+		2. containsKey(null) will return false for sure;
+		3. computeIfAbsent() will put the absent value into the map if the value is not null;
+		4. 
+		
 
 ### Stream, parallelStream
 
