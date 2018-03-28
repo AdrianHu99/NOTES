@@ -90,6 +90,10 @@ a and c will not get any space, and they will not be initialized. You can not do
 
 		The method get() of HashMap will return null if the key is not existing;
 		And containsKey(null) will return false for sure;
+
+### Stream, parallelStream
+
+            Be careful of parallelStream as it may or may not increase performance. For structures like ArrayList, it's easy to split it to several small lists, but for structures like LinkedList, it will only make things complicated. Also, in an environment where it is multi-thread, it is also possible to make things worse.
             
             
             
