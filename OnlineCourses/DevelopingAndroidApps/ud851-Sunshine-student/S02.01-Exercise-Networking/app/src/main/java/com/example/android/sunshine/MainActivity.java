@@ -15,6 +15,7 @@
  */
 package com.example.android.sunshine;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
@@ -57,22 +58,24 @@ public class MainActivity extends AppCompatActivity {
                 "Mon, May 30 - Post Apocalypse - 15°C / 10°C",
         };
 
-        // TODO (3) Delete the for loop that populates the TextView with dummy data
-        /*
-         * Iterate through the array and append the Strings to the TextView. The reason why we add
-         * the "\n\n\n" after the String is to give visual separation between each String in the
-         * TextView. Later, we'll learn about a better way to display lists of data.
-         */
-        for (String dummyWeatherDay : dummyWeatherData) {
-            mWeatherTextView.append(dummyWeatherDay + "\n\n\n");
-        }
+        //   (3) Delete the for loop that populates the TextView with dummy data
 
-        // TODO (9) Call loadWeatherData to perform the network request to get the weather
+
+        //   (9) Call loadWeatherData to perform the network request to get the weather
+        loadWeatherData();
+
     }
 
     // TODO (8) Create a method that will get the user's preferred location and execute your new AsyncTask and call it loadWeatherData
+    private void loadWeatherData() {
+
+    }
 
     // TODO (5) Create a class that extends AsyncTask to perform network requests
+    public class FetchWeatherData() extends AsyncTask<String, void, String[]> {
+
+
+    }
     // TODO (6) Override the doInBackground method to perform your network requests
     // TODO (7) Override the onPostExecute method to display the results of the network request
 }
