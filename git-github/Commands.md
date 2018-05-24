@@ -116,3 +116,13 @@
 ##### git diff
     after git diff, you can save the diff file: git diff sha1 sha2 > aaa.diff
     then you can do git apply aaa.diff to add the difference to your branch
+    
+    
+### commit
+
+##### accidentally staged a file change in a commit, how to remove it from commit?
+    git reset --soft HEAD^
+    git reset HEAD pathToThatFile
+    git commit -c ORIG_HEAD
+    
+    
