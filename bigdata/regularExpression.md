@@ -16,3 +16,10 @@
 
 #### find } catch { \n  log.error...  \n  throw ...
     ^(.*} catch.*)(?:(?:\r\n|[\r\n])[^\r\n]+)(log.error.*)(?:(?:\r\n|[\r\n])[^\r\n]+)(throw)
+    
+    
+#### Matching across different lines
+    [\s\S]* or [\w\W]* or [\d\D]*
+    If we have regular expression like below: 
+        HostPeer.doSelect[\s\S]*(host.save\()+?
+    It will try to find 
