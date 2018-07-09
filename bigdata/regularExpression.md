@@ -23,3 +23,4 @@
     If we have regular expression like below: 
         HostPeer.doSelect[\s\S]*(host.save\()+?
     It will try to find 
+    ![regular expression (cross multi lines)](https://github.com/adrrrrrrrian/notes/blob/master/bigdata/regular%20expression%20(cross%20multi%20lines).PNG)
