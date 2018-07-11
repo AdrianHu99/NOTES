@@ -32,6 +32,8 @@
 ### Collaboration
 ##### If work with others in the same branch, after each `force push`, we need to let others know and others need to do a `git reset --hard origin/branch_name` to sync with the force push. If you have any unstaged changes, make sure you stash them before doing that. If you have unpushed commit, you can do `git fetch` then `git rebase -i origin/branch_name` and only pick that unpushed commit.
 
+##### 不要用 git push --force，而要用 git push --force-with-lease 代替。在你上次提交之后，只要其他人往该分支提交给代码，git push --force-with-lease 会拒绝覆盖。
+
 ##### If you want to find out who is the author of the file, try `git blame PATH_TO_THE_FILE`.
 
 ### Checkout   
