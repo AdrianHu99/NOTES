@@ -127,4 +127,6 @@
     git reset HEAD pathToThatFile
     git commit -c ORIG_HEAD
     
+##### When you do `git reset HEAD~` to reset the top commit, your commit message is gone as well. 
+    If you want to reuse that commit message when you commit, do `git commit -C HEAD@{x}` (The number in {} depends on your `git reflog`, usually it's `1`)
     
