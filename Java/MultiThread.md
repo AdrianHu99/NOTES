@@ -34,4 +34,6 @@
         
 9. Remember when a thread called wait(), keep in mind to use notify() from other threads to wake it up, otherwise it will keep waiting.  
 
-10. 
+10. We can also use latch's await() and countDown() to replace wait() and notify(), latch does not need any lock, when count is 0 it will stop blocking. When there is nothing about synchronization, only threads communication, countDownLatch can be used.  
+
+11. 
