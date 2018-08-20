@@ -13,14 +13,16 @@
     volatile has much better performance than synchronization
     
     
-6. AtomicXXX also makes sure of atomicity and has better performance than synchronization  
+6. AtomicXXX also makes sure of atomicity and has better performance than synchronization   
 
-  But if we have such code:
-  if (count.get() < 999) {
-      count.incrementAndGet();
-  }
+
+      But if we have such code:  
+      if (count.get() < 999) {  
+          count.incrementAndGet();  
+      }  
   
-  Then it will not follow atomicity, because something can happen between the if and incrementAndGet()
+  
+    Then it will not follow atomicity, because something can happen between the if and incrementAndGet()
 
 7. Don't use string as the lock object, as s1 s2 may point to the same string object.  
 
