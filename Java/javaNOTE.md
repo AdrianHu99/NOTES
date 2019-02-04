@@ -1,6 +1,8 @@
 ### Collection
 
-1. `Collectors.toSet()` returns an unordered `Set`, and please remember `Set` does not have any duplicate elements.
+1. `Collectors.toSet()` returns an unordered `Set`, and please remember `Set` does not have any duplicate elements.  
+
+2. For for loop, it may hit NPE, to avoid that, make sure the list you use have a default value as an empty list instead of NULL.  
 
 ### JUnit
 
