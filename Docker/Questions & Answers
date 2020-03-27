@@ -1,0 +1,8 @@
+1. 
+Q: 
+  How to tell if the process is running inside a container?
+A: 
+  Check **/proc/1/cgroup**, When you are not in a container, 
+  there will be '/' for all hierarchies; if it is in a container, you will see the anchor point.  
+
+2. 
