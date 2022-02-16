@@ -1,0 +1,52 @@
+[user]
+	name = YOUR_NAME
+	email = xx@xxx.com
+[core]
+	editor = vim 
+	autocrlf = false
+[push]
+	default = upstream
+[color]
+	interactive = true
+# make untracked and changes visibly different
+[color "status"]
+	added = green bold
+	changed = red bold
+	untracked = cyan
+
+[color "branch"]
+	current = green bold
+	local = bold
+	remote = red bold
+
+[color "grep"]
+	match = cyan
+
+[pager]
+	color = true
+[alias]
+	l = log --graph --stat --find-copies --decorate
+	pr = pull --rebase
+	pu = push -u origin HEAD
+	pf = push -f origin HEAD
+	d = diff
+	dc = diff --cached
+	dw = diff --word-diff
+	s = status -s
+	co = checkout
+	cp = cherry-pick
+	b = branch
+    bd = branch -D
+	ri = rebase --interactive --autostash
+	# merge change into last commit without modifying the commit msg
+	oops = commit --amend --no-edit
+	# create a Formating commit that only adds trailing whitespace changes
+	whitespace-eol-commit = !bash ~/.git-alias-scripts/whitespace-eol-commit.sh
+	# credit to http://stackoverflow.com/a/4991675 for oldest-ancestor
+	oldest-ancestor = !bash -c 'diff --old-line-format='' --new-line-format='' <(git rev-list --first-parent "${1:-origin/integration}") <(git rev-list --first-parent "${2:-HEAD}") | head -1' -
+	pretty-log-branch = log HEAD ^origin/integration --graph --stat --find-copies --date-order
+	hash = rev-parse HEAD
+	change-commits = "!f() { VAR1=$1; VAR='$'$1; OLD=$2; NEW=$3; echo \"Are you sure for replace $VAR $OLD => $NEW ?(Y/N)\";read OK;if [ \"$OK\" = 'Y' ] ; then shift 3; git filter-branch --env-filter \"if [ \\\"${VAR}\\\" = '$OLD' ]; then export $VAR1='$NEW';echo 'to $NEW'; fi\" $@; fi;}; f "
+
+[credential]
+	helper = cache --timeout=604800
